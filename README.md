@@ -1,2 +1,36 @@
 # roaming_knight
-A function that gives the shortest path a knight can take between any two squares on a chess board.
+Get the shortest path a knight can take between any two squares on a chess board.
+
+```ruby
+chess = Board.new
+ => #<Board:0x00000001c2c378 @root=nil> 
+
+chess.knight_moves([0, 4], [6, 2])
+  ___ ___ ___ ___ ___ ___ ___ ___
+7|   |   |   |   |   |   |   |   |
+ |___|___|___|___|___|___|___|___|
+6|   |   |   |   |   |   |   |   |
+ |___|___|___|___|___|___|___|___|
+5|   |   |   |   |   |   |   |   |
+ |___|___|___|___|___|___|___|___|
+4| 1 |   |   |   |   |   |   |   |
+ |___|___|___|___|___|___|___|___|
+3|   |   | 2 |   |   |   |   |   |
+ |___|___|___|___|___|___|___|___|
+2|   |   |   |   | 3 |   | 5 |   |
+ |___|___|___|___|___|___|___|___|
+1|   |   |   |   |   |   |   |   |
+ |___|___|___|___|___|___|___|___|
+0|   |   |   |   |   | 4 |   |   |
+ |___|___|___|___|___|___|___|___|
+   0   1   2   3   4   5   6   7
+
+You can get to that square in 4 moves.
+[0, 4]
+[2, 3]
+[4, 2]
+[5, 0]
+[6, 2]
+ => nil 
+```
+
